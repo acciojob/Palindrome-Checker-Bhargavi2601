@@ -4,7 +4,7 @@ function palindrome(str) {
     str = str.toLowerCase();
     // Using Spread operator
     let arr = [...str];
-    console.log(arr);
+    //console.log(arr);
     let arrCopy = [...str];    //  reverse method changes to original array
     let arrReverse = arr.reverse();
         arr = arrCopy;
@@ -18,8 +18,8 @@ function palindrome(str) {
     }
 
    
-    return true;
-}
+    //return true;
+//}
 
 console.log(palindrome("abc"))
 module.exports = palindrome
