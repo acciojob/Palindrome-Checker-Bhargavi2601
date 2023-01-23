@@ -9,7 +9,7 @@ function palindrome(str) {
     let arrReverse = arr.reverse();
         arr = arrCopy;
     console.log(`reverseArray:${arrReverse}`);
-   // console.log(`array:${arr}`);
+    console.log(`array:${arr}`);
 
      for (let i = 0; i < arr.length; i++) {
         if (arrCopy[i] != arrReverse[i]) { 
