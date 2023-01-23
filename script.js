@@ -1,19 +1,25 @@
 // complete the given function
 
-function palindrome(str){
+function palindrome(str) {
+    str = str.toLowerCase();
+    // Using Spread operator
+    let arr = [...str];
+    console.log(arr);
+    let arrCopy = [...str];    //  reverse method changes to original array
+    let arrReverse = arr.reverse();
+        arr = arrCopy;
+    console.log(`reverseArray:${arrReverse}`);
+    console.log(`array:${arr}`);
 
-		unction palindrome(str){
- var removeChar = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+     for (let i = 0; i < arr.length; i++) {
+        if (arrCopy[i] != arrReverse[i]) { 
+            return false;
+        }
+    }
 
-  /* reverse removeChar for comparison*/
-  var checkPalindrome = removeChar.split('').reverse().join('');
-
-  /* Check to see if str is a Palindrome*/
-   if(removeChar === checkPalindrome){
-     return true;
-   }else{
-     return false;
-   }
+   
+    return true;
 }
-}
+
+console.log(palindrome("abc"))
 module.exports = palindrome
